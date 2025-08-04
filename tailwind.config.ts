@@ -26,8 +26,7 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -53,8 +52,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				security: 'hsl(var(--security-green))',
-				warning: 'hsl(var(--warning-amber))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -72,18 +69,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-surface': 'var(--gradient-surface)',
-				'gradient-glow': 'var(--gradient-glow)'
-			},
-			boxShadow: {
-				'primary': 'var(--shadow-primary)',
-				'elegant': 'var(--shadow-elegant)', 
-				'glow': 'var(--shadow-glow)'
-			},
-			transitionTimingFunction: {
-				'smooth': 'var(--transition-smooth)',
-				'bounce': 'var(--transition-bounce)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -102,39 +89,21 @@ export default {
 						height: '0'
 					}
 				},
-				'float': {
-					'0%, 100%': {
-						transform: 'translateY(0px)'
-					},
-					'50%': {
-						transform: 'translateY(-20px)'
-					}
-				},
-				'pulse-glow': {
-					'0%, 100%': {
-						opacity: '0.5'
-					},
-					'50%': {
-						opacity: '1'
-					}
-				},
-				'slide-up': {
+				'fade-up': {
 					'0%': {
-						transform: 'translateY(100px)',
-						opacity: '0'
+						opacity: '0',
+						transform: 'translateY(20px)'
 					},
 					'100%': {
-						transform: 'translateY(0)',
-						opacity: '1'
+						opacity: '1',
+						transform: 'translateY(0)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-				'slide-up': 'slide-up 0.8s ease-out'
+				'fade-up': 'fade-up 0.6s ease-out'
 			}
 		}
 	},

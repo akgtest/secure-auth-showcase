@@ -1,15 +1,9 @@
-import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import DemoSection from "@/components/DemoSection";
-import Footer from "@/components/Footer";
+import AuthDemo from "@/components/AuthDemo";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection />
-      <FeaturesSection />
-      <DemoSection />
-      <Footer />
+      <AuthDemo />
     </div>
   );
 };

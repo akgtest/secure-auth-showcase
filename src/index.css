@@ -2,68 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Secure Auth Design System - Expert-crafted for authentication excellence
-All colors MUST be HSL.
-*/
+/* Secure Auth - Clean & Focused Design System */
 
 @layer base {
   :root {
-    /* Deep sophisticated backgrounds */
-    --background: 222 47% 4%;
-    --foreground: 210 40% 98%;
+    /* Clean backgrounds */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    /* Premium card surfaces */
-    --card: 222 47% 6%;
-    --card-foreground: 210 40% 98%;
+    /* Card surfaces */
+    --card: 240 10% 7%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 7%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Electric cyan primary - signature auth color */
-    --primary: 192 100% 50%;
-    --primary-foreground: 222 47% 4%;
-    --primary-glow: 192 100% 70%;
+    /* Modern blue primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Sophisticated secondary tones */
-    --secondary: 240 20% 16%;
-    --secondary-foreground: 210 40% 98%;
+    /* Subtle secondary */
+    --secondary: 240 6% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Muted tech aesthetics */
-    --muted: 240 15% 12%;
+    /* Muted elements */
+    --muted: 240 6% 12%;
     --muted-foreground: 240 5% 65%;
 
-    /* Premium accent with depth */
-    --accent: 252 100% 65%;
-    --accent-foreground: 210 40% 98%;
+    /* Success green */
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 98%;
 
-    /* Security red for alerts */
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    /* Error red */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 85% 97%;
 
-    /* Subtle borders and inputs */
-    --border: 240 15% 20%;
-    --input: 240 15% 15%;
-    --ring: 192 100% 50%;
+    /* Borders and inputs */
+    --border: 240 6% 20%;
+    --input: 240 6% 15%;
+    --ring: 217 91% 60%;
 
-    /* Custom secure design tokens */
-    --security-green: 142 76% 36%;
-    --warning-amber: 38 92% 50%;
-    
-    /* Sophisticated gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(192 100% 50%) 0%, hsl(252 100% 65%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 4%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(192 100% 50% / 0.15) 0%, transparent 70%);
-    
-    /* Premium shadows */
-    --shadow-primary: 0 25px 50px -12px hsl(192 100% 50% / 0.25);
-    --shadow-elegant: 0 20px 40px -8px hsl(222 47% 4% / 0.4);
-    --shadow-glow: 0 0 80px hsl(192 100% 50% / 0.3);
-    
-    /* Smooth animations */
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Simple gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(142 71% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(240 10% 7%) 0%, hsl(240 6% 12%) 100%);
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
