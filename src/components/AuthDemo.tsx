@@ -13,7 +13,17 @@ import {
   CheckCircle,
   ArrowRight,
   Shield,
-  RotateCcw
+  RotateCcw,
+  Monitor,
+  Users,
+  Settings,
+  Activity,
+  Laptop,
+  Tablet,
+  Clock,
+  MapPin,
+  Trash2,
+  UserCheck
 } from "lucide-react";
 import { useState } from "react";
 
@@ -22,8 +32,10 @@ const AuthDemo = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <section className="min-h-screen bg-background flex items-center justify-center py-20">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center py-20">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* Left side - Info */}
         <div className="space-y-8">
@@ -66,6 +78,26 @@ const AuthDemo = () => {
               <div>
                 <h3 className="font-medium text-foreground">Social Login</h3>
                 <p className="text-sm text-muted-foreground">Google, GitHub authentication</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
+                <Monitor className="w-4 h-4 text-accent" />
+              </div>
+              <div>
+                <h3 className="font-medium text-foreground">Session Management</h3>
+                <p className="text-sm text-muted-foreground">Multi-device session control</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
+                <Users className="w-4 h-4 text-accent" />
+              </div>
+              <div>
+                <h3 className="font-medium text-foreground">Admin Dashboard</h3>
+                <p className="text-sm text-muted-foreground">User & session management</p>
               </div>
             </div>
           </div>
@@ -275,8 +307,227 @@ const AuthDemo = () => {
           </div>
         </div>
 
-      </div>
-    </section>
+        </div>
+      </section>
+
+      {/* Session Management Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Advanced Session Management
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Users can manage multiple active sessions across different devices with real-time monitoring and control.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* User Session Management */}
+            <Card className="p-6 bg-gradient-card border-border">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                  <Monitor className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">User Sessions</h3>
+                  <p className="text-muted-foreground">Manage your active sessions</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 bg-background/50 rounded-lg border border-border">
+                  <div className="flex items-center gap-3">
+                    <Laptop className="w-5 h-5 text-primary" />
+                    <div>
+                      <p className="font-medium text-foreground">MacBook Pro</p>
+                      <p className="text-sm text-muted-foreground flex items-center gap-2">
+                        <MapPin className="w-3 h-3" />
+                        New York, US • Current session
+                      </p>
+                    </div>
+                  </div>
+                  <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
+                    Active
+                  </Badge>
+                </div>
+
+                <div className="flex items-center justify-between p-4 bg-background/50 rounded-lg border border-border">
+                  <div className="flex items-center gap-3">
+                    <Smartphone className="w-5 h-5 text-muted-foreground" />
+                    <div>
+                      <p className="font-medium text-foreground">iPhone 15</p>
+                      <p className="text-sm text-muted-foreground flex items-center gap-2">
+                        <Clock className="w-3 h-3" />
+                        2 hours ago • London, UK
+                      </p>
+                    </div>
+                  </div>
+                  <Button variant="outline" size="sm">
+                    <Trash2 className="w-3 h-3" />
+                    Revoke
+                  </Button>
+                </div>
+
+                <div className="flex items-center justify-between p-4 bg-background/50 rounded-lg border border-border">
+                  <div className="flex items-center gap-3">
+                    <Tablet className="w-5 h-5 text-muted-foreground" />
+                    <div>
+                      <p className="font-medium text-foreground">iPad Pro</p>
+                      <p className="text-sm text-muted-foreground flex items-center gap-2">
+                        <Clock className="w-3 h-3" />
+                        1 day ago • Tokyo, JP
+                      </p>
+                    </div>
+                  </div>
+                  <Button variant="outline" size="sm">
+                    <Trash2 className="w-3 h-3" />
+                    Revoke
+                  </Button>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-border">
+                <Button variant="outline" className="w-full gap-2">
+                  <Activity className="w-4 h-4" />
+                  View Session History
+                </Button>
+              </div>
+            </Card>
+
+            {/* Admin Features */}
+            <Card className="p-6 bg-gradient-card border-border">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                  <Users className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">Admin Dashboard</h3>
+                  <p className="text-muted-foreground">Manage all users and sessions</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-center p-3 bg-background/50 rounded-lg">
+                    <p className="text-2xl font-bold text-foreground">1,247</p>
+                    <p className="text-sm text-muted-foreground">Total Users</p>
+                  </div>
+                  <div className="text-center p-3 bg-background/50 rounded-lg">
+                    <p className="text-2xl font-bold text-accent">823</p>
+                    <p className="text-sm text-muted-foreground">Active Sessions</p>
+                  </div>
+                  <div className="text-center p-3 bg-background/50 rounded-lg">
+                    <p className="text-2xl font-bold text-primary">156</p>
+                    <p className="text-sm text-muted-foreground">Online Now</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-background/50 rounded-lg">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                        <UserCheck className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground">john@example.com</p>
+                        <p className="text-sm text-muted-foreground">3 active sessions</p>
+                      </div>
+                    </div>
+                    <Button variant="outline" size="sm">
+                      Manage
+                    </Button>
+                  </div>
+
+                  <div className="flex items-center justify-between p-3 bg-background/50 rounded-lg">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                        <UserCheck className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground">alice@company.com</p>
+                        <p className="text-sm text-muted-foreground">1 active session</p>
+                      </div>
+                    </div>
+                    <Button variant="outline" size="sm">
+                      Manage
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-border space-y-3">
+                <Button variant="auth" className="w-full gap-2">
+                  <Settings className="w-4 h-4" />
+                  Admin Dashboard
+                </Button>
+                <Button variant="outline" className="w-full gap-2">
+                  <Activity className="w-4 h-4" />
+                  Security Logs
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Complete Authentication Solution
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Everything you need for secure, scalable authentication with advanced session management.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: Shield,
+                title: "Security First",
+                description: "Industry-standard encryption and security practices built-in"
+              },
+              {
+                icon: Monitor,
+                title: "Multi-Device",
+                description: "Track and manage sessions across all user devices"
+              },
+              {
+                icon: Users,
+                title: "User Management",
+                description: "Complete admin dashboard for user and session control"
+              },
+              {
+                icon: Mail,
+                title: "Email Verification",
+                description: "Secure email verification flow with customizable templates"
+              },
+              {
+                icon: RotateCcw,
+                title: "Password Recovery",
+                description: "Secure password reset with email confirmation"
+              },
+              {
+                icon: Activity,
+                title: "Session Analytics",
+                description: "Detailed logs and analytics for all authentication events"
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="p-6 bg-gradient-card border-border hover:scale-105 transition-transform">
+                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

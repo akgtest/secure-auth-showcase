@@ -104,7 +104,7 @@ const DemoSection = () => {
                   </Badge>
                 </div>
 
-                <Button variant="hero" size="lg" className="w-full group">
+                <Button variant="auth" size="lg" className="w-full group">
                   <Shield className="w-5 h-5 mr-2" />
                   Authenticate Securely
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -196,7 +196,7 @@ const DemoSection = () => {
                 <p className="text-muted-foreground mb-4">
                   Enterprise-grade protection with zero-trust architecture
                 </p>
-                <Button variant="premium" className="w-full">
+                <Button variant="auth" className="w-full">
                   View Security Documentation
                 </Button>
               </div>
